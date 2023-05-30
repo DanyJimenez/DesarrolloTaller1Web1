@@ -83,4 +83,43 @@ while (opcion !== 0) {
     }
     contadorOpcion3 ++; //contador 3
 
+  }else if (opcion === 4) {
+
+    let x = parseInt(prompt('Digite el valor de x: '));
+    let divisores_n1 = []
+    for (let i = 1; i < x; i++) {
+      if (x % i == 0) {
+        divisores_n1.push(i)
+      }
+
+    }
+    let suma_d1 = 0;
+    for (let i of divisores_n1) {
+      suma_d1 += i;
+    }
+    console.log(`Los divisores de ${x} son: ${divisores_n1} y su suma es: ${suma_d1} `)
+
+
+    let y = parseInt(prompt('Digite el valor de y: '));
+    let divisores_n2 = []
+    for (let i = 1; i < y; i++) {
+      if (y % i == 0) {
+        divisores_n2.push(i)
+      }
+
+    }
+    let suma_d2 = 0;
+    for (let i of divisores_n2) {
+      suma_d2 += i;
+    }
+    console.log(`Los divisores de ${y} son: ${divisores_n2} y su suma es: ${suma_d2} `)
+
+
+    if (suma_d1 == y && suma_d2 == x) {
+      console.log(`${x} y ${y} son números amigos`)
+    } else {
+      console.log(`${x} y ${y} no son números amigos`)
+    }
+    contadorOpcion4++;
+    //220 - 284 ==> números amigos
   }
