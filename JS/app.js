@@ -191,3 +191,23 @@ while (opcion !== 0) {
   }
   
 }
+
+console.log(`El ejercicio 1 se ejecutó ${contadorOpcion1} veces`);
+console.log(`El ejercicio 2 se ejecutó ${contadorOpcion2} veces`);
+console.log(`El ejercicio 3 se ejecutó ${contadorOpcion3} veces`);
+console.log(`El ejercicio 4 se ejecutó ${contadorOpcion4} veces`);
+console.log(`El ejercicio 5 se ejecutó ${contadorOpcion5} veces`);
+console.log(`El ejercicio 6 se ejecutó ${contadorOpcion6} veces`);
+
+
+
+const contadores = [contadorOpcion1, contadorOpcion2, contadorOpcion3, contadorOpcion4, contadorOpcion5, contadorOpcion6];
+
+const indiceMaximo = contadores.indexOf(Math.max(...contadores));
+const ejercicioMasVeces = `Ejercicio ${indiceMaximo + 1}`;
+
+const indiceMinimo = contadores.indexOf(Math.min(...contadores));
+const ejercicioMenosVeces = `Ejercicio ${indiceMinimo + 1}`;
+
+console.log(`El ejercicio que se ejecutó más veces es ${ejercicioMasVeces}`);
+console.log(`El ejercicio que se ejecutó menos veces es ${ejercicioMenosVeces}`);
