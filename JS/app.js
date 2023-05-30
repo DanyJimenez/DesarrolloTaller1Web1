@@ -122,4 +122,28 @@ while (opcion !== 0) {
     }
     contadorOpcion4++;
     //220 - 284 ==> números amigos
+  }else if (opcion === 5) {
+    let valorCompra = parseInt(prompt('Ingrese el valor de la compra: $'));
+    let cantidad = parseInt(prompt('Ingrese la cantidad del producto: '));
+
+    let subtotal = valorCompra * cantidad;
+    let iva = subtotal * 0.19;
+    let total = subtotal + iva;
+
+    if (subtotal > 500000) {
+      total = subtotal;
+      iva = 0;
+      console.log(`El valor del IVA es: $${iva}`);
+      console.log(`El valor de la compra es: $${subtotal}`);
+      if (subtotal > 1000000) {
+        let descuento = subtotal * 0.1;
+        total -= descuento;
+        console.log(`Descuento del 10% aplicado. Total a pagar: $${total}`);
+      }
+    } else {
+      console.log(`El valor del IVA es: $${iva}`);
+      console.log(`Total a pagar: $${total}`);
+    }
+    contadorOpcion5++; //contador 5
+
   }
