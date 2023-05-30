@@ -59,4 +59,14 @@ while (opcion !== 0) {
     console.log("Orden de mayor a menor:", ordenarMayorMenor(numeroUno, numeroDos, numeroTres));
     contadorOpcion1 ++; //contador 1
 
+  }else if (opcion === 2) {
+    const pi = Math.PI;
+    let radio = parseFloat(prompt("Ingrese el radio de la circunferencia: "))
+    function calcularAreaCircunferencia(radio) {
+      return (pi * radio ** 2).toFixed(3)
+    }
+    console.log(`El área de una cicunferencia cuyo radio es ${radio} es: ${calcularAreaCircunferencia(radio)}`);
+    contadorOpcion2++; //contador 2
+
+
   }
