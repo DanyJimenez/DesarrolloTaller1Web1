@@ -69,4 +69,18 @@ while (opcion !== 0) {
     contadorOpcion2++; //contador 2
 
 
+  }else if (opcion === 3) {
+    let ladoA = parseFloat(prompt('Ingrese el valor del lado a: '));
+    let ladoB = parseFloat(prompt('Ingrese el valor del lado b: '));
+    let ladoC = parseFloat(prompt('Ingrese el valor del lado c: '));
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+      console.log(`Un triángulo cuyo lado a es ${ladoA}, lado b es ${ladoB} y lado c es ${ladoC} es equilatero.`)
+    } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+      console.log(`Un triángulo cuyo lado a es ${ladoA}, lado b es ${ladoB} y lado c es ${ladoC} es isósceles.`)
+    } else {
+      console.log(`Un triángulo cuyo lado a es ${ladoA}, lado b es ${ladoB} y lado c es ${ladoC} es escaleno.`)
+    }
+    contadorOpcion3 ++; //contador 3
+
   }
